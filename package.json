@@ -1,0 +1,24 @@
+{
+  "name": "ohce-kata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec  -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablo-albaladejo/ohce-kata.git"
+  },
+  "keywords": [],
+  "author": "Pablo Albaladejo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pablo-albaladejo/ohce-kata/issues"
+  },
+  "homepage": "https://github.com/pablo-albaladejo/ohce-kata#readme",
+  "dependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^6.2.2"
+  }
+}
