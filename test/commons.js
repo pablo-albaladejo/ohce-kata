@@ -1,5 +1,5 @@
 const expect = require('expect.js');
-const { reverseStr, isBetween } = require('../lib/commons');
+const { reverseStr, isBetween, daytime } = require('../lib/commons');
 
 describe('commons', () => {
 
@@ -14,7 +14,14 @@ describe('commons', () => {
     const num= 8;
     const range = [0,12];
     const expected = true;
-    const result = isBetween(num, range)
+    const result = isBetween(num, range);
+    expect(expected).to.equal(result);
+  });
+
+  it('should return the daytime according the hour', () => {
+    const hours = 18;
+    const expected = 'morning';
+    const result = daytime(hours);
     expect(expected).to.equal(result);
   });
 
