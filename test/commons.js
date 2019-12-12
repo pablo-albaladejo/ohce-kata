@@ -26,7 +26,7 @@ describe('commons', () => {
   });
 
   it('should test a palindrome word', () => {
-    const word = 'hola';
+    const word = 'oso';
     const expected = true;
     const result = isPalindrome(word);
     expect(expected).to.equal(result);
