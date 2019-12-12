@@ -19,7 +19,7 @@ describe('commons', () => {
   });
 
   it('should return the daytime according the hour', () => {
-    const hours = 18;
+    const hours = 8;
     const expected = 'morning';
     const result = daytime(hours);
     expect(expected).to.equal(result);
