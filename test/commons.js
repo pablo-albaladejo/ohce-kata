@@ -11,7 +11,7 @@ describe('commons', () => {
   });
 
   it('should test a number is within a range', () => {
-    const num= 14;
+    const num= 8;
     const range = [0,12];
     const expected = true;
     const result = isBetween(num, range)
