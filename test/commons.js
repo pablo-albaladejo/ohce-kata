@@ -1,5 +1,5 @@
 const expect = require('expect.js');
-const { reverseStr, isBetween, daytime } = require('../lib/commons');
+const { reverseStr, isBetween, daytime, isPalindrome } = require('../lib/commons');
 
 describe('commons', () => {
 
@@ -22,6 +22,13 @@ describe('commons', () => {
     const hours = 8;
     const expected = 'morning';
     const result = daytime(hours);
+    expect(expected).to.equal(result);
+  });
+
+  it('should test a palindrome word', () => {
+    const word = 'hola';
+    const expected = true;
+    const result = isPalindrome(word);
     expect(expected).to.equal(result);
   });
 
