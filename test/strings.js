@@ -31,7 +31,7 @@ describe('it tests strings functions', () => {
   describe('it tests goodbye function', () => {
     it('should say goodbye to user', () => {
       const user = 'Pablo';
-      const expected = 'Goodbye lucas!';
+      const expected = 'Goodbye Pablo!';
       const result = goodbye(user);
       expect(result).to.equal(expected);
     });
