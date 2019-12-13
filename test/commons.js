@@ -21,7 +21,7 @@ describe('it tests commons functions', () => {
   it('should not include max value range', () => {
     const num= 12;
     const range = [0,12];
-    const expected = true;
+    const expected = false;
     const result = isBetween(num, range);
     expect(result).to.equal(expected);
   });
