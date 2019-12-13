@@ -1,8 +1,11 @@
 const program = require('commander');
 const { machine } = require("../lib/state/machine");
 const { STATES } = require("../lib/state/states");
-const { clearTerminal } = require('../lib/ui');
+const { initConsole } = require("../lib/ui");
+
 function start() {
+
+
     const hours = program.hours || new Date().getHours();
 
     const initState = {
@@ -18,6 +21,12 @@ function start() {
 
 program
     .option('-h, --hours <int>', 'time of day')
-    .action(start);
+    .action(() => {
+
+        initConsole().then(() => {
+            start();
+        })
+
+    });
 
 program.parse(process.argv);
