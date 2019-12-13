@@ -4,8 +4,6 @@ const { STATES } = require("../lib/state/states");
 const { initConsole } = require("../lib/ui");
 
 function start() {
-
-
     const hours = program.hours || new Date().getHours();
 
     const initState = {
