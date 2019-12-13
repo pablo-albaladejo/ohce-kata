@@ -1,7 +1,7 @@
 const expect = require('expect.js');
 
 const { STATES } = require('../lib/state/states');
-const {stateTransition } = require('../lib/state/transitions');
+const { stateTransition } = require('../lib/state/transitions');
 
 describe('it tests state transitions', () => {
 
@@ -25,11 +25,17 @@ describe('it tests state transitions', () => {
       expect(result.nextState).not.to.equal(null);
     });
 
-    it('should return a output', () => {
+    it('should return a nextState object', () => {
+      expect(result.nextState).to.be.an('object');
+    });
+
+    it('should return an output', () => {
       expect(result.output).not.to.equal(null);
     });
 
+    it('should return an array output ', () => {
+      expect(result.output).to.be.an('array');
+    });
   })
-
 
 });
