@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec  -w"
+    "start": "node ./bin/index.js",
+    "test": "mocha --reporter spec",
+    "test_dev": "mocha --reporter spec  -w"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/pablo-albaladejo/ohce-kata#readme",
   "dependencies": {
+    "commander": "^4.0.1",
     "expect.js": "^0.3.1",
     "mocha": "^6.2.2"
   }
