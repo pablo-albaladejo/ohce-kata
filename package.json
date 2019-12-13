@@ -7,7 +7,7 @@
     "ohce-kata": "./bin/index.js"
   },
   "scripts": {
-    "start": "node ./bin/index.js",
+    "start": "clear && node ./bin/index.js",
     "test": "mocha ./test/unit/*.js ./test/e2e/*.js --reporter spec",
     "test:unit": "mocha ./test/unit/*.js --reporter spec",
     "test:unit:dev": "mocha ./test/unit/*.js --reporter spec  -w",
