@@ -38,4 +38,23 @@ describe('it tests state transitions', () => {
     });
   })
 
+  describe('transitions from INIT', () => {
+    
+    const hours = (new Date()).getHours();
+    const { nextState, output } = stateTransition(S0, hours);
+  
+    it('should transitioning from INIT state to NAME state', () => {
+      expect(nextState.q).to.equal(STATES.NAME);
+    });
+  
+    it('should set the hours', () => {
+      expect(nextState.attrs.hours).to.equal(hours);
+    });
+  
+    it('should have no output', () => {
+      expect(output.length).to.equal(0);
+    });
+  
+  });
+
 });
