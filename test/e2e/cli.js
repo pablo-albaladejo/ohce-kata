@@ -1,6 +1,7 @@
 const { expect } = require('chai').use(require('chai-string'));
 const cmd = require('../helpers/cmd');
-const {greet } = require('../../lib/strings');
+const { greet, cheer } = require('../../lib/strings');
+const { reverseStr } = require('../../lib/commons');
 
 let CLI;
 describe('it tests cli', () => {
@@ -15,17 +16,47 @@ describe('it tests cli', () => {
         expect(output).not.to.equal(null);
     });
 
-    it('Should greet the user', async () => {
-        const name = 'Pablo';
-        const hours = 0;
+    describe('it should greet the user', () => {
 
-        const promiseFromChildProcess = CLI('-h ' + hours);
-        const childProcess = promiseFromChildProcess.relatedProcess;
+        it('Should ask the username', async () => {
+            const promiseFromChildProcess = CLI('');
+            const output = await promiseFromChildProcess;
 
-        childProcess.send({ name });
+            expect(output).to.equal(`? What's your name? `);
+        });
 
-        const output = await promiseFromChildProcess;
-        expect(output).to.startsWith(greet(name, hours));
+        it('Should use the night greet at nigth', async () => {
+            const name = 'Pablo';
+            const hours = 0;
+
+            const promiseFromChildProcess = CLI('-h ' + hours, [name]);
+            const output = await promiseFromChildProcess;
+
+            expect(output.split('\n')[1]).to.equal(greet(name, hours));
+        });
+
+        it('Should use the morning greet at morning', async () => {
+            const name = 'Pablo';
+            const hours = 8;
+
+            const promiseFromChildProcess = CLI('-h ' + hours, [name]);
+            const output = await promiseFromChildProcess;
+
+            expect(output.split('\n')[1]).to.equal(greet(name, hours));
+        });
+
+
+        it('Should use the afternoon greet at afternoon', async () => {
+            const name = 'Pablo';
+            const hours = 16;
+
+            const promiseFromChildProcess = CLI('-h ' + hours, [name]);
+            const output = await promiseFromChildProcess;
+
+            expect(output.split('\n')[1]).to.equal(greet(name, hours));
+        });
 
     });
-})
+
+
+});
