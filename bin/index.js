@@ -3,8 +3,6 @@ const { machine } = require("../lib/state/machine");
 const { STATES } = require("../lib/state/states");
 const { clearTerminal } = require('../lib/ui');
 function start() {
-    clearTerminal();
-
     const hours = program.hours || new Date().getHours();
 
     const initState = {
