@@ -7,12 +7,12 @@
     "ohce-kata": "./bin/index.js"
   },
   "scripts": {
-    "start": "clear && node ./bin/index.js",
-    "test": "mocha ./test/unit/*.js ./test/e2e/*.js --reporter spec",
-    "test:unit": "mocha ./test/unit/*.js --reporter spec",
-    "test:unit:dev": "mocha ./test/unit/*.js --reporter spec  -w",
-    "test:e2e": "mocha ./test/e2e/*.js --reporter spec",
-    "test:e2e:dev": "mocha ./test/e2e/*.js --reporter spec -w"
+    "start": "node ./bin/index.js",
+    "test": "NODE_ENV=test mocha ./test/unit/*.js ./test/e2e/*.js --reporter spec",
+    "test:unit": "NODE_ENV=test mocha ./test/unit/*.js --reporter spec",
+    "test:unit:dev": "NODE_ENV=test mocha ./test/unit/*.js --reporter spec  -w",
+    "test:e2e": "NODE_ENV=test mocha ./test/e2e/*.js --reporter spec",
+    "test:e2e:dev": "NODE_ENV=test mocha ./test/e2e/*.js --reporter spec -w"
   },
   "repository": {
     "type": "git",
