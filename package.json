@@ -8,8 +8,10 @@
   },
   "scripts": {
     "start": "node ./bin/index.js",
-    "unit_test": "mocha ./test/unit/*.js --reporter spec",
-    "unit_test_dev": "mocha ./test/unit/*.js --reporter spec  -w"
+    "test:unit": "mocha ./test/unit/*.js --reporter spec",
+    "test:unit:dev": "mocha ./test/unit/*.js --reporter spec  -w",
+    "test:e2e": "mocha ./test/e2e/*.js --reporter spec",
+    "test:e2e:dev": "mocha ./test/e2e/*.js --reporter spec -w"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,10 @@
   },
   "homepage": "https://github.com/pablo-albaladejo/ohce-kata#readme",
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-string": "^1.5.0",
     "commander": "^4.0.1",
+    "concat-stream": "^2.0.0",
     "expect.js": "^0.3.1",
     "mocha": "^6.2.2"
   }
