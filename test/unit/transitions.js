@@ -155,8 +155,8 @@ describe('it tests state transitions', () => {
       const goodbye_msg = goodbye(S2.attrs.name);
       const { nextState, output } = stateTransition(S2, exit_commnand);
 
-      it('should no transitioning from WORD state', () => {
-        expect(nextState.q).to.equal(S2.q);
+      it('should transitioning from WORD state to EXIT state', () => {
+        expect(nextState.q).to.equal(STATES.EXIT);
       });
 
       it('should have a single output', () => {
