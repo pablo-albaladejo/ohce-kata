@@ -86,7 +86,7 @@ describe('it tests state transitions', () => {
     });
 
     it('should have a output greeting with name', () => {
-      expect(output).to.be.an('array').that.does.include(greeting);
+      expect(output).to.be.an('array').contain(greeting)
     });
 
   });
