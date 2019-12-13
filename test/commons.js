@@ -18,6 +18,14 @@ describe('it tests commons functions', () => {
     expect(result).to.equal(expected);
   });
 
+  it('should not include max value range', () => {
+    const num= 12;
+    const range = [0,12];
+    const expected = true;
+    const result = isBetween(num, range);
+    expect(result).to.equal(expected);
+  });
+
   it('should return the daytime according the hour', () => {
     const hours = 8;
     const expected = 'morning';
