@@ -1,9 +1,9 @@
 const expect = require('expect.js');
 
-const { STATES } = require('../lib/state/states');
-const { stateTransition } = require('../lib/state/transitions');
-const { greet, goodbye, cheer } = require('../lib/strings');
-const { reverseStr } = require('../lib/commons');
+const { STATES } = require('../../lib/state/states');
+const { stateTransition } = require('../../lib/state/transitions');
+const { greet, goodbye, cheer } = require('../../lib/strings');
+const { reverseStr } = require('../../lib/commons');
 
 describe('it tests state transitions', () => {
 

@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start": "node ./bin/index.js",
-    "test": "mocha --reporter spec",
-    "test_dev": "mocha --reporter spec  -w"
+    "unit_test": "mocha ./test/unit/*.js --reporter spec",
+    "unit_test_dev": "mocha ./test/unit/*.js --reporter spec  -w"
   },
   "repository": {
     "type": "git",

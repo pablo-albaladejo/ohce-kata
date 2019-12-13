@@ -1,5 +1,5 @@
 const expect = require('expect.js');
-const { greet, goodbye } = require('../lib/strings');
+const { greet, goodbye } = require('../../lib/strings');
 
 describe('it tests strings functions', () => {
   describe('it tests greet function', () => {

@@ -1,5 +1,5 @@
 const expect = require('expect.js');
-const { reverseStr, isBetween, daytime, isPalindrome } = require('../lib/commons');
+const { reverseStr, isBetween, daytime, isPalindrome } = require('../../lib/commons');
 
 describe('it tests commons functions', () => {
 
